@@ -1,9 +1,9 @@
 @use "variables" as *;
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
 
-@mixin font($c: black, $size: 16px, $lh: 20px) {
+@mixin font($c: $Dark_grayish_cyan, $size: 16px, $fw: 400) {
   font-family: "Space Mono", monospace;
   font-size: $size;
-  line-height: $lh;
+  font-weight: $fw;
   color: $c;
 }

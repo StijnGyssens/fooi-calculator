@@ -12,30 +12,46 @@
     <main>
       <section class="input">
         <form action="" class="input__form">
-          <fieldset>
-            <label for="bill" class="input__form__label">Bill</label>
-            <input type="text" placeholder="0" name="bill" id="bill" />
+          <fieldset class="input__form__field">
+            <label for="bill" class="input__form__field__label">Bill</label>
+            <input
+              type="text"
+              placeholder="0"
+              name="bill"
+              id="bill"
+              class="input__form__field__input"
+            />
           </fieldset>
-          <fieldset>
-            <legend class="input__form__label">Select Tip %</legend>
+          <fieldset class="input__form__field input__form__field--buttons">
+            <legend class="input__form__field__label">Select Tip %</legend>
             <input type="radio" name="tip" id="5" value="5" />
-            <label for="5">5%</label>
+            <label for="5" class="input__form__field__btn">5%</label>
             <input type="radio" name="tip" id="10" value="10" />
-            <label for="10">10%</label>
+            <label for="10" class="input__form__field__btn">10%</label>
             <input type="radio" name="tip" id="15" value="15" />
-            <label for="15">15%</label>
+            <label for="15" class="input__form__field__btn">15%</label>
             <input type="radio" name="tip" id="25" value="25" />
-            <label for="25">25%</label>
+            <label for="25" class="input__form__field__btn">25%</label>
             <input type="radio" name="tip" id="50" value="50" />
-            <label for="50">50%</label>
+            <label for="50" class="input__form__field__btn">50%</label>
             <input type="radio" name="tip" id="custom" value="custom" />
-            <label for="custom">Custom</label>
+            <label
+              for="custom"
+              class="input__form__field__btn input__form__field__btn--custom"
+              >Custom</label
+            >
           </fieldset>
-          <fieldset>
-            <label for="people" class="input__form__label"
+          <fieldset class="input__form__field">
+            <label for="people" class="input__form__field__label"
               >Number of People</label
             >
-            <input type="text" name="people" id="people" placeholder="0" />
+            <input
+              type="text"
+              name="people"
+              id="people"
+              placeholder="0"
+              class="input__form__field__input"
+            />
           </fieldset>
         </form>
       </section>
@@ -46,14 +62,14 @@
               <p>Tip Amount</p>
               <p>/ person</p>
             </div>
-            <div>$0.00</div>
+            <p>0.00</p>
           </div>
           <div>
             <div>
               <p>Total</p>
               <p>/ person</p>
             </div>
-            <div>$0.00</div>
+            <p>0.00</p>
           </div>
           <button>Reset</button>
         </article>

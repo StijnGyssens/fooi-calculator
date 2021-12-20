@@ -36,6 +36,46 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        &__field {
+          &__label {
+            display: block;
+            padding-bottom: 12px;
+          }
+          &__input {
+            @include font($Very_dark_cyan, 16px, 700);
+            text-align: end;
+            background-color: $Light_grayish_cyan2;
+            border-radius: 7px;
+            padding: 12px;
+            position: relative;
+            width: 100%;
+            &::placeholder {
+              @include font($Dark_grayish_cyan2);
+            }
+          }
+          &__btn {
+            flex-basis: 115px;
+            height: 48px;
+            background-color: $Very_dark_cyan;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include font(white, 16px, 700);
+            border-radius: 6px;
+            &--custom {
+              @include font($Dark_grayish_cyan, 16px, 700);
+              background-color: $Light_grayish_cyan2;
+            }
+          }
+          &--buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px 16px;
+            input {
+              display: none;
+            }
+          }
+        }
       }
     }
     .output {

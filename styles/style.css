@@ -181,8 +181,8 @@ body {
   background-color: #c5e4e7;
   font-family: "Space Mono", monospace;
   font-size: 16px;
-  line-height: 20px;
-  color: black;
+  font-weight: 400;
+  color: #5e7a7d;
 }
 body header {
   margin: 150px auto 80px auto;
@@ -217,6 +217,56 @@ body main .input__form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+body main .input__form__field__label {
+  display: block;
+  padding-bottom: 12px;
+}
+body main .input__form__field__input {
+  font-family: "Space Mono", monospace;
+  font-size: 16px;
+  font-weight: 700;
+  color: #00494d;
+  text-align: end;
+  background-color: #f4fafa;
+  border-radius: 7px;
+  padding: 12px;
+  position: relative;
+  width: 100%;
+}
+body main .input__form__field__input::placeholder {
+  font-family: "Space Mono", monospace;
+  font-size: 16px;
+  font-weight: 400;
+  color: #7f9c9f;
+}
+body main .input__form__field__btn {
+  flex-basis: 115px;
+  height: 48px;
+  background-color: #00494d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Space Mono", monospace;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  border-radius: 6px;
+}
+body main .input__form__field__btn--custom {
+  font-family: "Space Mono", monospace;
+  font-size: 16px;
+  font-weight: 700;
+  color: #5e7a7d;
+  background-color: #f4fafa;
+}
+body main .input__form__field--buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 16px;
+}
+body main .input__form__field--buttons input {
+  display: none;
 }
 body main .output {
   background-color: #00494d;
