@@ -139,8 +139,57 @@ q:after {
   content: none;
 }
 
+@font-face {
+  font-family: "icons";
+  src: url("./icons/fonts/icomoon.eot?aos49u");
+  src: url("./icons/fonts/icomoon.eot?aos49u#iefix") format("embedded-opentype"), url("./icons/fonts/icomoon.ttf?aos49u") format("truetype"), url("./icons/fonts/icomoon.woff?aos49u") format("woff"), url("./icons/fonts/icomoon.svg?aos49u#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=icon-],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icons" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-icon-dollar:before {
+  content: "\e900";
+  color: #9ebbbd;
+}
+
+.icon-icon-person:before {
+  content: "\e901";
+  color: #9ebbbd;
+}
+
+.icon-logo:before {
+  content: "\e902";
+  color: #3d6666;
+}
+
 body {
   background-color: #c5e4e7;
+}
+body header {
+  margin: 50px auto 80px auto;
+  display: flex;
+  justify-content: center;
+}
+body header::after {
+  content: "\e902";
+  font-family: icons;
+  color: #00494d;
+  font-size: 60px;
 }
 body main {
   width: 90%;

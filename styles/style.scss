@@ -2,9 +2,19 @@
 @use "./base/fonts" as *;
 @use "./base/mixins" as *;
 @use "./base/variables" as *;
+@use "./icons/style.scss";
 
 body {
   background-color: $Light_grayish_cyan;
+  header {
+    margin: 50px auto 80px auto;
+    display: flex;
+    justify-content: center;
+    &::after {
+      @include icon();
+      font-size: 60px;
+    }
+  }
   main {
     width: 90%;
     max-width: 920px;
