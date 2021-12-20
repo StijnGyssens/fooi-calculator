@@ -1,0 +1,7 @@
+@use "variables" as *;
+
+@mixin icon($content: "\e900", $color: $very_dark_cyan) {
+  content: $content;
+  font-family: icons;
+  color: $color;
+}
