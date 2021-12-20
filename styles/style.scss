@@ -75,7 +75,7 @@ body {
               @include font($Dark_grayish_cyan2, 24px, 700);
             }
             &:hover,
-            &:active {
+            &:focus {
               outline: 2px solid $Bright_cyan;
             }
           }

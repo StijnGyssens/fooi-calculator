@@ -262,7 +262,7 @@ body main .input__form__field__input::placeholder {
   font-weight: 700;
   color: #7f9b9f;
 }
-body main .input__form__field__input:hover, body main .input__form__field__input:active {
+body main .input__form__field__input:hover, body main .input__form__field__input:focus {
   outline: 2px solid #26c0ab;
 }
 body main .input__form__field__error {
