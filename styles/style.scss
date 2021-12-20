@@ -21,7 +21,7 @@ body {
   main {
     width: 90%;
     max-width: 920px;
-    min-height: 484px;
+    min-height: 480px;
     background-color: white;
     margin: 0 auto;
     border-radius: 22px;
@@ -29,8 +29,10 @@ body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: 45px;
     .input {
-      flex-basis: 410px;
+      flex-basis: 400px;
+      flex-grow: 1;
       &__form {
         height: 100%;
         display: flex;
@@ -150,7 +152,8 @@ body {
     }
     .output {
       background-color: $Very_dark_cyan;
-      flex-basis: 410px;
+      flex-basis: 400px;
+      flex-grow: 1;
       border-radius: 14px;
       padding: 50px 30px 38px 30px;
       display: flex;
@@ -161,6 +164,9 @@ body {
         display: flex;
         flex-direction: column;
         gap: 60px;
+        &:first-of-type {
+          margin-bottom: 55px;
+        }
         &__item {
           display: flex;
           justify-content: space-between;
@@ -186,6 +192,7 @@ body {
           height: 48px;
           border-radius: 5px;
           background-color: rgba($Bright_cyan, 0.3);
+          cursor: pointer;
           &--active {
             background-color: $Bright_cyan;
           }

@@ -200,7 +200,7 @@ body header::after {
 body main {
   width: 90%;
   max-width: 920px;
-  min-height: 484px;
+  min-height: 480px;
   background-color: white;
   margin: 0 auto;
   border-radius: 22px;
@@ -208,9 +208,11 @@ body main {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  gap: 45px;
 }
 body main .input {
-  flex-basis: 410px;
+  flex-basis: 400px;
+  flex-grow: 1;
 }
 body main .input__form {
   height: 100%;
@@ -339,7 +341,8 @@ body main .input__form__field__btn--custom input:hover, body main .input__form__
 }
 body main .output {
   background-color: #00494d;
-  flex-basis: 410px;
+  flex-basis: 400px;
+  flex-grow: 1;
   border-radius: 14px;
   padding: 50px 30px 38px 30px;
   display: flex;
@@ -351,6 +354,9 @@ body main .output__article {
   display: flex;
   flex-direction: column;
   gap: 60px;
+}
+body main .output__article:first-of-type {
+  margin-bottom: 55px;
 }
 body main .output__article__item {
   display: flex;
@@ -391,6 +397,7 @@ body main .output__article__btn {
   height: 48px;
   border-radius: 5px;
   background-color: rgba(38, 192, 171, 0.3);
+  cursor: pointer;
 }
 body main .output__article__btn--active {
   background-color: #26c0ab;
