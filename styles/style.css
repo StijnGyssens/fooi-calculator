@@ -179,11 +179,17 @@ q:after {
 
 body {
   background-color: #c5e4e7;
+  font-family: "Space Mono", monospace;
+  font-size: 16px;
+  line-height: 20px;
+  color: black;
 }
 body header {
-  margin: 50px auto 80px auto;
+  margin: 150px auto 80px auto;
   display: flex;
+  height: 70px;
   justify-content: center;
+  align-items: center;
 }
 body header::after {
   content: "\e902";
@@ -194,8 +200,28 @@ body header::after {
 body main {
   width: 90%;
   max-width: 920px;
+  min-height: 484px;
   background-color: white;
   margin: 0 auto;
+  border-radius: 22px;
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+body main .input {
+  flex-basis: 410px;
+}
+body main .input__form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body main .output {
+  background-color: #00494d;
+  flex-basis: 410px;
+  border-radius: 14px;
 }
 
 /*# sourceMappingURL=style.css.map */

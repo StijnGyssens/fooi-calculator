@@ -6,10 +6,13 @@
 
 body {
   background-color: $Light_grayish_cyan;
+  @include font();
   header {
-    margin: 50px auto 80px auto;
+    margin: 150px auto 80px auto;
     display: flex;
+    height: 70px;
     justify-content: center;
+    align-items: center;
     &::after {
       @include icon();
       font-size: 60px;
@@ -18,7 +21,27 @@ body {
   main {
     width: 90%;
     max-width: 920px;
+    min-height: 484px;
     background-color: white;
     margin: 0 auto;
+    border-radius: 22px;
+    padding: 32px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .input {
+      flex-basis: 410px;
+      &__form {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    }
+    .output {
+      background-color: $Very_dark_cyan;
+      flex-basis: 410px;
+      border-radius: 14px;
+    }
   }
 }

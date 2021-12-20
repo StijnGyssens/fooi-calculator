@@ -11,11 +11,13 @@
     <header></header>
     <main>
       <section class="input">
-        <form action="">
-          <label for="bill">Bill</label>
-          <input type="text" placeholder="0" name="bill" id="bill" />
+        <form action="" class="input__form">
           <fieldset>
-            <legend>Select Tip %</legend>
+            <label for="bill" class="input__form__label">Bill</label>
+            <input type="text" placeholder="0" name="bill" id="bill" />
+          </fieldset>
+          <fieldset>
+            <legend class="input__form__label">Select Tip %</legend>
             <input type="radio" name="tip" id="5" value="5" />
             <label for="5">5%</label>
             <input type="radio" name="tip" id="10" value="10" />
@@ -29,8 +31,12 @@
             <input type="radio" name="tip" id="custom" value="custom" />
             <label for="custom">Custom</label>
           </fieldset>
-          <label for="people">Number of People</label>
-          <input type="text" name="people" id="people" placeholder="0" />
+          <fieldset>
+            <label for="people" class="input__form__label"
+              >Number of People</label
+            >
+            <input type="text" name="people" id="people" placeholder="0" />
+          </fieldset>
         </form>
       </section>
       <section class="output">
