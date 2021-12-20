@@ -42,15 +42,17 @@ body {
             padding-bottom: 12px;
           }
           &__input {
-            @include font($Very_dark_cyan, 16px, 700);
+            @include font($Very_dark_cyan, 24px, 700);
             text-align: end;
             background-color: $Light_grayish_cyan2;
             border-radius: 7px;
-            padding: 12px;
+            padding: 8px 12px;
             position: relative;
             width: 100%;
+            outline: none;
+            cursor: pointer;
             &::placeholder {
-              @include font($Dark_grayish_cyan2);
+              @include font($Dark_grayish_cyan2, 24px, 700);
             }
           }
           &__btn {
@@ -60,10 +62,14 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
-            @include font(white, 16px, 700);
+            cursor: pointer;
+            @include font(white, 24px, 700);
             border-radius: 6px;
+            &--active {
+              background-color: $Bright_cyan;
+            }
             &--custom {
-              @include font($Dark_grayish_cyan, 16px, 700);
+              @include font($Dark_grayish_cyan, 24px, 700);
               background-color: $Light_grayish_cyan2;
             }
           }
@@ -82,6 +88,45 @@ body {
       background-color: $Very_dark_cyan;
       flex-basis: 410px;
       border-radius: 14px;
+      padding: 50px 30px 38px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      &__article {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        &__item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          &__white {
+            @include font(white, 16px, 500);
+            padding-bottom: 10px;
+          }
+          &__normal {
+            @include font($Dark_grayish_cyan2);
+          }
+          &__big {
+            @include font($Bright_cyan, 40px, 700);
+            &::before {
+              @include icon("\e900", $Bright_cyan);
+              padding-right: 3px;
+            }
+          }
+        }
+        &__btn {
+          @include font($Very_dark_cyan, 20px, 700);
+          text-transform: uppercase;
+          height: 48px;
+          border-radius: 5px;
+          background-color: rgba($Bright_cyan, 0.3);
+          &--active {
+            background-color: $Bright_cyan;
+          }
+        }
+      }
     }
   }
 }
