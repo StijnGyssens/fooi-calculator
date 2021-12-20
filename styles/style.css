@@ -216,11 +216,31 @@ body main .input__form {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 body main .input__form__field__label {
   display: block;
   padding-bottom: 12px;
+}
+body main .input__form__field__icon {
+  position: relative;
+}
+body main .input__form__field__icon::after {
+  position: absolute;
+  top: 18px;
+  left: 12px;
+  font-size: 16px;
+}
+body main .input__form__field__icon--dollar::after {
+  content: "\e900";
+  font-family: icons;
+  color: #7f9b9f;
+}
+body main .input__form__field__icon--person::after {
+  content: "\e901";
+  font-family: icons;
+  color: #7f9b9f;
 }
 body main .input__form__field__input {
   font-family: "Space Mono", monospace;
@@ -242,8 +262,34 @@ body main .input__form__field__input::placeholder {
   font-weight: 700;
   color: #7f9b9f;
 }
+body main .input__form__field__input:hover, body main .input__form__field__input:active {
+  outline: 2px solid #26c0ab;
+}
+body main .input__form__field__error {
+  display: none;
+  color: red;
+}
+body main .input__form__field span {
+  display: flex;
+  justify-content: space-between;
+}
+body main .input__form__field--error .input__form__field__error {
+  display: block;
+}
+body main .input__form__field--error .input__form__field__input {
+  outline: 2px solid red;
+}
+body main .input__form__field--buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 16px;
+}
+body main .input__form__field--buttons input {
+  display: none;
+}
 body main .input__form__field__btn {
   flex-basis: 115px;
+  flex-grow: 1;
   height: 48px;
   background-color: #00494d;
   display: flex;
@@ -258,6 +304,7 @@ body main .input__form__field__btn {
 }
 body main .input__form__field__btn--active {
   background-color: #26c0ab;
+  color: #00494d;
 }
 body main .input__form__field__btn--custom {
   font-family: "Space Mono", monospace;
@@ -266,13 +313,8 @@ body main .input__form__field__btn--custom {
   color: #5e7a7d;
   background-color: #f5fafa;
 }
-body main .input__form__field--buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px 16px;
-}
-body main .input__form__field--buttons input {
-  display: none;
+body main .input__form__field__btn--custom:hover, body main .input__form__field__btn--custom:active {
+  outline: 2px solid #26c0ab;
 }
 body main .output {
   background-color: #00494d;

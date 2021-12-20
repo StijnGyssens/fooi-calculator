@@ -14,13 +14,17 @@
         <form action="" class="input__form">
           <fieldset class="input__form__field">
             <label for="bill" class="input__form__field__label">Bill</label>
-            <input
-              type="text"
-              placeholder="0"
-              name="bill"
-              id="bill"
-              class="input__form__field__input"
-            />
+            <div
+              class="input__form__field__icon input__form__field__icon--dollar"
+            >
+              <input
+                type="text"
+                placeholder="0"
+                name="bill"
+                id="bill"
+                class="input__form__field__input"
+              />
+            </div>
           </fieldset>
           <fieldset class="input__form__field input__form__field--buttons">
             <legend class="input__form__field__label">Select Tip %</legend>
@@ -45,17 +49,24 @@
               >Custom</label
             >
           </fieldset>
-          <fieldset class="input__form__field">
-            <label for="people" class="input__form__field__label"
-              >Number of People</label
+          <fieldset class="input__form__field input__form__field--error">
+            <span>
+              <label for="people" class="input__form__field__label"
+                >Number of People</label
+              >
+              <p class="input__form__field__error">Can't be zero</p>
+            </span>
+            <div
+              class="input__form__field__icon input__form__field__icon--person"
             >
-            <input
-              type="text"
-              name="people"
-              id="people"
-              placeholder="0"
-              class="input__form__field__input"
-            />
+              <input
+                type="text"
+                name="people"
+                id="people"
+                placeholder="0"
+                class="input__form__field__input"
+              />
+            </div>
           </fieldset>
         </form>
       </section>

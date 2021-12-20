@@ -35,11 +35,31 @@ body {
         height: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 40px;
         &__field {
           &__label {
             display: block;
             padding-bottom: 12px;
+          }
+          &__icon {
+            position: relative;
+            &::after {
+              position: absolute;
+              top: 18px;
+              left: 12px;
+              font-size: 16px;
+            }
+            &--dollar {
+              &::after {
+                @include icon("\e900", $Dark_grayish_cyan2);
+              }
+            }
+            &--person {
+              &::after {
+                @include icon("\e901", $Dark_grayish_cyan2);
+              }
+            }
           }
           &__input {
             @include font($Very_dark_cyan, 24px, 700);
@@ -54,9 +74,40 @@ body {
             &::placeholder {
               @include font($Dark_grayish_cyan2, 24px, 700);
             }
+            &:hover,
+            &:active {
+              outline: 2px solid $Bright_cyan;
+            }
+          }
+          &__error {
+            display: none;
+            color: red;
+          }
+          span {
+            display: flex;
+            justify-content: space-between;
+          }
+          &--error {
+            .input__form__field {
+              &__error {
+                display: block;
+              }
+              &__input {
+                outline: 2px solid red;
+              }
+            }
+          }
+          &--buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px 16px;
+            input {
+              display: none;
+            }
           }
           &__btn {
             flex-basis: 115px;
+            flex-grow: 1;
             height: 48px;
             background-color: $Very_dark_cyan;
             display: flex;
@@ -67,18 +118,15 @@ body {
             border-radius: 6px;
             &--active {
               background-color: $Bright_cyan;
+              color: $Very_dark_cyan;
             }
             &--custom {
               @include font($Dark_grayish_cyan, 24px, 700);
               background-color: $Light_grayish_cyan2;
-            }
-          }
-          &--buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 14px 16px;
-            input {
-              display: none;
+              &:hover,
+              &:active {
+                outline: 2px solid $Bright_cyan;
+              }
             }
           }
         }
