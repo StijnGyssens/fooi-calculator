@@ -1,0 +1,14 @@
+@use "./base/reset" as *;
+@use "./base/fonts" as *;
+@use "./base/mixins" as *;
+@use "./base/variables" as *;
+
+body {
+  background-color: $Light_grayish_cyan;
+  main {
+    width: 90%;
+    max-width: 920px;
+    background-color: white;
+    margin: 0 auto;
+  }
+}

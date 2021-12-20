@@ -4,7 +4,55 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
     <title>Splitter</title>
   </head>
-  <body></body>
+  <body>
+    <header></header>
+    <main>
+      <section class="input">
+        <form action="">
+          <label for="bill">Bill</label>
+          <input type="text" placeholder="0" name="bill" id="bill" />
+          <fieldset>
+            <legend>Select Tip %</legend>
+            <input type="radio" name="tip" id="5" value="5" />
+            <label for="5">5%</label>
+            <input type="radio" name="tip" id="10" value="10" />
+            <label for="10">10%</label>
+            <input type="radio" name="tip" id="15" value="15" />
+            <label for="15">15%</label>
+            <input type="radio" name="tip" id="25" value="25" />
+            <label for="25">25%</label>
+            <input type="radio" name="tip" id="50" value="50" />
+            <label for="50">50%</label>
+            <input type="radio" name="tip" id="custom" value="custom" />
+            <label for="custom">Custom</label>
+          </fieldset>
+          <label for="people">Number of People</label>
+          <input type="text" name="people" id="people" placeholder="0" />
+        </form>
+      </section>
+      <section class="output">
+        <article>
+          <div>
+            <div>
+              <p>Tip Amount</p>
+              <p>/ person</p>
+            </div>
+            <div>$0.00</div>
+          </div>
+          <div>
+            <div>
+              <p>Total</p>
+              <p>/ person</p>
+            </div>
+            <div>$0.00</div>
+          </div>
+          <button>Reset</button>
+        </article>
+        <article></article>
+      </section>
+    </main>
+  </body>
 </html>
